@@ -1,0 +1,240 @@
+.home-demin {
+    margin-bottom: 20px;
+    padding-left: 9px;
+    padding-right: 9px;
+    position: relative;
+    background-image: url(https://mcdn.coolmate.me/image/April2022/mceclip1_68.jpg);
+    background-size: cover;
+    display: flex;
+    height: 553px;
+    border-radius: 50px;
+
+
+}
+
+
+.about--card {
+    position: absolute;
+    display: flex;
+    top: 0;
+    bottom: 0;
+    margin: auto 0px;
+    max-width: 1280px;
+    width: 100%;
+        height: 500px;
+
+    &__image {
+
+
+        background-color: #fff;
+        width: 60%;
+        height: 500px;
+        background-size: cover;
+        border-radius: 50px;
+
+
+
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        border-radius: 50px;
+        }
+    }
+
+    &__content {
+        padding: 16px;
+        width: 42%;
+        flex: auto;
+        color: #fff;
+        &__heading {
+            margin-bottom: 20px;
+            font-size: 60px;
+        }
+        &__des {
+            font-size: 17px;
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.content--medium {
+    max-width: 1280px;
+    height: 560px;
+    @include tablet {
+        padding-left: 9px;
+        padding-right: 9px;
+    }
+
+    &__layout {
+        position: relative;
+        height: 100%;
+
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -o-object-fit: contain;
+            object-fit: contain;
+            -o-object-position: center;
+            object-position: center;
+            transition: linear 0.01s;
+
+
+        }
+
+        
+
+        .image--scroll {
+            animation-name: scrollImg;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+    }
+}
+
+.content--medium__layout__btn{
+    position: absolute;
+    margin: auto;
+    right: 0;
+    left: 0;
+    bottom: 200px;
+    width: 200px;
+}
+
+.abouts__wrapper {
+
+    position:relative;
+
+    &__content {
+
+        min-height: 398px;
+        width: 100%;
+        justify-content: space-around;
+        &__box{
+            
+            img {
+                max-width: 260px;
+            }
+        }
+    }
+}
+
+.thumnail {
+    padding-top: 120%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+
+    
+    img {
+        object-fit: cover;
+        
+
+        position: absolute;
+        top: 0;;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        border-radius: 20px;
+        transition: all .3s;
+        cursor: pointer;
+
+        &:hover {
+
+            transform: scale(1.5 );
+    
+        }
+        
+    }
+
+    span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: calc(100% - 32px);
+        transform: translate3d(-50%,-50%,0);
+        border: 2px solid #fff;
+        background-color: #fff;
+        color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        border-radius: 16px;
+        transition: all .3s;
+        font-weight: 700;
+        cursor: pointer;
+
+
+    }
+
+    &:hover span {
+        border: 2px solid rgb(0, 0, 0);
+        
+    }
+   
+}
+
+.home__caption {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: #000;
+    border-radius: 24px;
+    color: #fff;
+    font-size: 24px;
+    height: 65px;
+    margin-bottom: 8px;
+
+    a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        background-color: #2f5acf;
+        border-radius: 24px;
+        padding: 0 35px;
+        font-weight: 400;
+        cursor: pointer;
+    }
+}
+
+.home__info {
+    
+    &__container {
+        display: flex;
+  
+
+        &__item {
+            
+            margin: 0 8px;  
+
+            img {
+                height: 300px;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 16px;
+
+            }
+        }
+    }
+}
+
+@keyframes scrollImg {
+    0% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(-10.474%);
+
+    }
+}
+

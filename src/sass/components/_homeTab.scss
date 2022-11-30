@@ -1,0 +1,38 @@
+.home-tab {
+    background-color: #fff;
+
+    &__header {
+        display: flex;
+        justify-content: center;
+        margin-top: 22px;
+        margin-bottom: 15px;
+
+        &__item {
+            position: relative;
+            width: 150px;
+            padding-bottom: 15px;
+            text-align: center;
+            color: #8e8e8e;
+            border-bottom: 2px solid #8e8e8e;
+            margin-right: 1px;
+            transition: all 0.3s;
+
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            p {
+                letter-spacing: .03em;
+                font-size: 14px;
+                line-height: 18px;
+                font-weight: 700;
+            }
+        }
+        .active {
+            color: #000;
+            border-color: #000;
+        }
+        
+    }
+}

@@ -1,0 +1,170 @@
+.product-card {
+    margin-bottom: 30px;
+    border-radius: 16px;
+    
+    &__color {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -2px;
+        margin-right: -2px;
+        margin-bottom: 10px;
+
+        .active {
+
+            border-radius: 10px;
+            border-style: solid;
+            border-color: #000;
+        }
+
+
+        &__item {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            padding: 1px;
+            border: 1px solid #fff;
+            span {
+                display: block;
+                width: 35px;
+                height: 20px;
+                border-radius: 10px;
+                background-repeat: no-repeat;
+                background-size: 250%;
+                background-position: 50%;
+                border: 1px solid rgb(161, 161, 161);
+                
+            }
+
+        }
+    }
+
+    p {
+        font-weight: 800;
+        font-size: 14px;
+        line-height: 1.2em;
+    }
+
+    &__name {
+        margin-bottom: 5px;
+    }
+
+    &__price {
+        margin-bottom: 5px;
+        
+        span {
+            margin-right: 10px;
+            font-weight: 600;
+        }
+
+        &--new {
+            color: red;
+        }
+        &--old {
+            color: rgb(177, 165, 165);
+        }
+        &--discount {
+            color: red;
+        }
+    }
+
+    &__image {
+        padding-top: 120%;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 20px;
+        cursor: pointer;
+        img {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            border-radius: 20px;
+
+            &:nth-child(1) {
+                transform: translateX(-50%) scale(1);
+                transition: transform .3s ease;
+            }
+
+            &:nth-child(2) {
+                transform: translateX(-50%) scale(0);
+            }
+        }
+
+        &:hover img {
+            &:nth-child(1) {
+                transform: translateX(-50%);
+            }
+
+            &:nth-child(2) {
+                transform: translateX(-50%);
+                transition: transform .3s ease;
+            }
+        }
+
+        &__size {
+            position: absolute;
+            left: 9px;
+            bottom: 20px;
+            flex-wrap: wrap;
+            display: none;
+
+            
+            
+            &__item {
+                width: 49px;
+                height: 44px;
+                padding: 4px;
+                background-color: #fff;
+                border-radius: 10px;
+                margin-left: 8px;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all .5s;
+
+                span {
+                    font-size: 15px;
+                    font-weight: 750;
+                    text-transform: uppercase;
+                    color: #333;
+                }
+
+                &:hover {
+                    background-color: #333;
+
+                    span {
+                        color: #fff;
+
+                    }
+                }
+            }
+
+        }
+        
+        &:hover &__size {
+            display: flex;
+            
+            animation-name: sizeAnimation;
+            animation-duration: 0.7s;
+        }
+        
+    }
+}
+
+@keyframes sizeAnimation {
+    0% {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    100% {
+        bottom: 20px;
+        opacity: 1;
+    }
+}

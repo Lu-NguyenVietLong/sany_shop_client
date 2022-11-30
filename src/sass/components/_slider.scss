@@ -1,0 +1,177 @@
+.slider {
+    position: relative;
+    height: 450px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    width: 100%;
+
+    @include tablet {
+        width: 100%;
+        height: 350px;
+    }
+
+    @include mobile {
+        height: 200px;
+    }
+    
+    &__item {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        position: absolute;
+        inset: 0;
+        transition: all .2s;
+
+        img {
+            height: 450px;
+            width: 100%;
+
+            @include tablet {
+                width: 100%;
+                height: 350px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-grow: unset;
+                z-index: 98;
+            }
+
+            @include mobile {
+                height: 200px;
+            }
+        }
+        
+    }
+    .active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: visible;
+    }
+
+    &__control {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &__item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 3rem;
+            opacity: 0.5;
+            &__index {
+                font-size: 1.5rem;
+                cursor: default;
+
+                @include tablet {
+                    font-size: 1rem;
+                }
+    
+                @include mobile {
+                    font-size: 0.75rem;
+                }
+            }
+            &:hover {
+                opacity: 1;
+            }
+
+            @include tablet {
+                font-size: 1.5rem;
+            }
+
+            @include mobile {
+                font-size: 1rem;
+            }
+        }
+
+    }
+
+    &__gradient {
+        position: absolute;
+        left: 50%;
+        width: 100%;
+        transform: translate3d(-50%,0,0);
+        height: 105px;
+        width: 100%;
+        bottom: 0;
+        background-image: linear-gradient(to top,#000000, #c7c5c5);
+        opacity: 0.4;
+
+        @include tablet {
+            height: 180px;
+        }
+
+        @include mobile {
+            height: 60px;
+        }
+    }
+
+    &__info {
+        position: absolute;
+        bottom: 55px;
+        left: 50%;
+        width: 100%;
+        transform: translate3d(-50%,0,0);
+
+        @include tablet {
+            bottom: 40px;
+        }
+
+        @include mobile {
+            bottom: 25px;
+        }
+
+        &__wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include tablet {
+                flex-direction: column-reverse;
+            }
+
+            @include mobile {
+                flex-direction: row;
+                width: 100%;
+            }
+
+            &__item {
+                flex: 1;
+                border-radius: 16px;
+                padding: 5px 15px;
+                text-align: center;
+                font-size: 13px;
+                margin: 0 15px;
+                font-weight: 700;
+                line-height: 1.15em;
+                transition: all .3s;
+                border: 1px solid #fff;
+                color: #fff;
+                
+                &:hover {
+                    cursor: pointer;
+                    background-color: #fff;
+                    color: #000;
+                }
+
+                @include tablet {
+                    margin-top: 15px;
+                    padding: 5px 8px;
+                    font-size: 10px;
+                    width: 80%;
+
+                }
+
+                @include mobile {
+                    font-size: 8px;
+                    margin: 0 2px;
+                    width: 90%;
+                }
+            }
+        }
+    }
+}

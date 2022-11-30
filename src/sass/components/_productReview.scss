@@ -1,0 +1,108 @@
+.product-review {
+    padding: 0 16px 0 16px;
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    @include tablet {
+        padding: 0 9px 0 9px;
+    }
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 35px 65px;
+        border-top: 1px solid #d9d9d9;
+        border-bottom: 1px solid #d9d9d9;
+
+        @include tablet {
+            flex-flow: column;
+            align-items: flex-end;
+            padding: 16px 0;
+            border-bottom: 0;
+        }
+        &__title {
+            display: flex;
+            align-items: center;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 30px;
+            color: #000;
+            width: 50%;
+
+            @include tablet {
+                font-size: 21px;
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            span {
+                margin-right: 90px;
+                display: flex;
+                justify-content:center;
+                align-items: center;
+                font-weight: 600;
+                font-size: 20px;
+                @include tablet {
+                    margin-right: 10px;
+                }
+
+                p {
+                    margin-left: 5px;
+                }
+
+                .icon-star {
+                    color: blue;
+                    font-size: 2.5rem;
+                }
+            }
+        }
+    }
+    &__content {
+        margin-top: 30px;
+        &__item {
+            &__wrapper {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                border-bottom: 1px solid #d9d9d9;
+                padding: 0 0 30px 0;
+
+                &__rate {
+                    
+                    &__star {
+                        .icon-rate {
+                            font-size:1.25rem;
+
+                        }
+                        .active-rate {
+                            color: blue;
+                        }
+                    }
+                }
+
+                &__content {
+                    margin-left: 20px;
+                    
+                    &__author {
+                        font-weight: 600;
+                        margin-bottom: 5px;
+                    }
+                    &__product {
+                        color: #c2c0c0;
+                        margin-bottom: 25px;
+                    }
+                    &__des {
+                        p {
+                            margin-bottom: 25px;
+                        }
+                        &__date {
+                            color: #b6b5b5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

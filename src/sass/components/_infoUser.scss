@@ -1,0 +1,57 @@
+.info-input {
+    margin-right: 80px;
+    margin-left: 20px;
+
+    &__item {
+        display: flex;
+        margin-top: 20px;
+        @include mobile {
+            flex-flow: column;
+            margin-top: 15px;
+
+        }
+        &__title {
+            display: flex;
+            align-items: center;
+            width: 35%;
+        }
+
+        &__ip {
+            background: #fff;
+            border: 1px solid #d9d9d9;
+            box-sizing: border-box;
+            border-radius: 16px;
+            height: 40px;
+            width: 100%;
+            padding: 5px 20px;
+            transition: all .2s;
+        }
+
+        &__radio {
+            display: flex;
+
+            div {
+                margin-right: 20px;
+
+                span {
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        &__select {
+            display: flex;
+            select {
+                padding: 5px 10px 5px 20px;
+                background: #fff;
+                border: 1px solid #d9d9d9;
+                box-sizing: border-box;
+                border-radius: 16px;
+                height: 30px;
+                width: 100%;
+                transition: all .2s;
+                margin-right: 20px;
+            }
+        }
+    }
+}

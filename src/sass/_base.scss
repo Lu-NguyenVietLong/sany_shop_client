@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 13px;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    max-width: 1620px;
+
+}
+
+.main {
+    margin-top:80px;
+    min-height: 100vh;
+
+    background-color: #fff;
+}
+
+.Blue {
+    background-color: #4267b2;
+}
+.Orange {
+    background-color: #fbb96b;
+}
+
+.White {
+    background-color: #fff;
+}
+
+.Black {
+    background-color: #000;
+}
+
+.Red {
+    background-color: red;
+}
+
+.Gray {
+    background-color: gray;
+}
+
+.Green {
+    background-color: green;
+}
+
+.blue {
+    background-color: #4267b2;
+}
+.orange {
+    background-color: #fbb96b;
+}
+
+.white {
+    background-color: #fff;
+}
+
+.black {
+    background-color: #000;
+}
+
+.red {
+    background-color: red;
+}
+
+.gray {
+    background-color: gray;
+}
+.Green {
+    background-color: green;
+}
+.background-image-color {
+    background-image: url(https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/November2022/2-5a23.jpg);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: inherit;
+    opacity: .2;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+@each $color, $val in $colors {
+    .color-#{$color} {
+        color: $val;
+    }
+
+    .bg-#{$color} {
+        background-color: $val;
+    }
+}
+
+@each $val in $numbers {
+    .grid-col-#{$val} {
+        grid-template-columns: repeat($val, 1fr);
+    }
+}
+
+@each $val in $numbers {
+    .grid-col-md-#{$val} {
+        @include tablet {
+            grid-template-columns: repeat($val, 1fr);
+        }
+    }
+}
+
+@each $val in $numbers {
+    .grid-col-sm-#{$val} {
+        @include mobile {
+            grid-template-columns: repeat($val, 1fr);
+        }
+    }
+}
+
+.grid {
+    display: grid;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
